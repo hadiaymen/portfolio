@@ -18,11 +18,11 @@ export default function Home() {
       
       <main className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-28 pb-12 overflow-x-hidden">
         <Hero />
-        <Skills />
         <FeaturedProject />
         <Projects />
         <ExperienceGrid />
         <Certifications />
+        <Skills />
         <Contact />
       </main>
       

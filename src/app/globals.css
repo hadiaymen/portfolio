@@ -57,6 +57,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 ::selection {
   background-color: rgba(70, 72, 212, 0.1);
   color: #4648d4;

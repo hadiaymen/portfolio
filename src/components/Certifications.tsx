@@ -7,18 +7,20 @@ const certifications = [
   {
     title: "MATLAB Onramp",
     issuer: "MathWorks",
-    year: "2023",
+    year: "2026",
     description:
       "Comprehensive certification in MATLAB programming, data analysis, and visualization.",
     icon: "calculate",
+    link: "/certificates/matlab-onramp.pdf",
   },
   {
     title: "Simulink Onramp",
     issuer: "MathWorks",
-    year: "2023",
+    year: "2026",
     description:
       "Certification in Simulink for model-based design, simulation, and dynamic system modeling.",
     icon: "schema",
+    link: "/certificates/simulink-onramp.pdf",
   },
 ];
 
@@ -48,7 +50,7 @@ export default function Certifications() {
                   {cert.icon}
                 </span>
               </div>
-              <div className="flex-1 min-w-0">
+              <div className="flex-grow min-w-0">
                 <div className="flex items-center gap-3 mb-1">
                   <h3 className="font-label-md font-bold text-black">
                     {cert.title}
@@ -63,6 +65,19 @@ export default function Certifications() {
                 <p className="font-body-md text-[#4c4546]/70">
                   {cert.description}
                 </p>
+                {cert.link && (
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[12px] font-bold text-[#4648d4] hover:underline mt-3"
+                  >
+                    View Certificate
+                    <span className="material-symbols-outlined text-[14px]">
+                      open_in_new
+                    </span>
+                  </a>
+                )}
               </div>
             </motion.div>
           </AnimatedSection>
