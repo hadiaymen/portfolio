@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #f8f9fa;
+  --color-foreground: #191c1d;
+
+  --color-surface: #f8f9fa;
+  --color-surface-dim: #d9dadb;
+  --color-surface-bright: #f8f9fa;
+  --color-surface-lowest: #ffffff;
+  --color-surface-low: #f3f4f5;
+  --color-surface-container: #edeeef;
+  --color-surface-high: #e7e8e9;
+  --color-surface-highest: #e1e3e4;
+
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #4c4546;
+  --color-inverse-surface: #2e3132;
+  --color-inverse-on-surface: #f0f1f2;
+
+  --color-outline: #7e7576;
+  --color-outline-variant: #cfc4c5;
+
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1b1b1b;
+
+  --color-secondary: #4648d4;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #6063ee;
+  --color-secondary-dim: #c0c1ff;
+
+  --color-accent-blue: #4f7df5;
+  --color-accent-purple: #8b5cf6;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-body: var(--font-inter);
+
+  --radius-card: 32px;
+  --radius-inner: 24px;
+  --radius-button: 16px;
+}
+
+/* ==================== BASE STYLES ==================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #191c1d;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(70, 72, 212, 0.1);
+  color: #4648d4;
+}
+
+/* ==================== SCROLL PROGRESS BAR ==================== */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #4648d4, #8b5cf6);
+  transform-origin: left;
+  z-index: 9999;
+}
+
+/* ==================== GLASSMORPHISM ==================== */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 32px;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.03),
+    0 4px 16px rgba(0, 0, 0, 0.04),
+    0 20px 40px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.06),
+    0 24px 48px rgba(0, 0, 0, 0.04);
+}
+
+/* ==================== DENSE CARD ==================== */
+.dense-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 32px;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.02),
+    0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dense-card:hover {
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* ==================== PILL BADGE ==================== */
+.pill-badge {
+  padding: 3px 12px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #f3f4f5;
+  color: #191c1d;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.pill-badge:hover {
+  background: #e7e8e9;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.pill-badge-accent {
+  background: #4648d4;
+  color: white;
+  border-color: transparent;
+}
+
+.pill-badge-accent:hover {
+  background: #3a3bc0;
+  border-color: transparent;
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+.font-display {
+  font-family: var(--font-sans, 'Geist', sans-serif);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.font-headline-lg {
+  font-family: var(--font-sans, 'Geist', sans-serif);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+}
+
+.font-headline-md {
+  font-family: var(--font-sans, 'Geist', sans-serif);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+
+.font-label-md {
+  font-family: var(--font-sans, 'Geist', sans-serif);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.font-label-sm {
+  font-family: var(--font-sans, 'Geist', sans-serif);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.font-body-lg {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.font-body-md {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* ==================== CUSTOM SCROLLBAR ==================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .font-display {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.03em;
+  }
+
+  .font-headline-lg {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .glass-card,
+  .dense-card {
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .font-display {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
