@@ -11,7 +11,7 @@ export default function FeaturedProject() {
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4648d4] block mb-2">
             Featured Project
           </span>
-          <h2 className="font-headline-md font-bold text-black">Lekhai AI</h2>
+          <h2 className="font-headline-md font-bold text-black">StuNet</h2>
         </div>
       </AnimatedSection>
 
@@ -25,9 +25,9 @@ export default function FeaturedProject() {
             {/* Project Image */}
             <div className="aspect-[4/3] md:aspect-auto overflow-hidden bg-[#f3f4f5]">
               <motion.img
-                alt="Lekhai AI - AI Financial Statement Generator"
+                alt="StuNet - AI Student Learning Platform"
                 className="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5GdwUH-v5peN4BRmAsZB5AA3dC-oz2WVH8JMcr2G9jHlaVzs9RD8O9vJV4ORnVFzaMShKVXCOAu_dHoSAwfEuFPm9ULvhChoLJ9wTWob1_5UhEyQaqpz9EmixlUfaUCDB6tXRPoHSSyuJSBfyHYdrgpG18LPHQfCCuL5R-XjyWMkSFp4HNPgIcI_elPa12eHQvYmQktGcxSsiHmJiq5BGNEfLqJHbPsl1n5PkScEHchfY5G5QGV7lYKCvHnYPZWk1gFimkPSrf_A"
+                src="/projects/stunet.png"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.6 }}
               />
@@ -42,11 +42,11 @@ export default function FeaturedProject() {
                   </span>
                   Featured
                 </div>
-                <h3 className="font-headline-lg mb-3 text-black">Lekhai AI</h3>
+                <h3 className="font-headline-lg mb-3 text-black">StuNet</h3>
                 <p className="font-body-lg text-[#4c4546]/70 mb-6 leading-relaxed">
-                  AI-powered financial statement generator with automated OCR
-                  and LLM data extraction. Upload any financial document and get
-                  structured, actionable data instantly.
+                  AI-powered student learning platform with organized study
+                  resources, smart assistance, and a modern responsive interface
+                  for an enhanced learning experience.
                 </p>
               </div>
 
@@ -57,9 +57,8 @@ export default function FeaturedProject() {
                 <div className="flex flex-wrap gap-2">
                   {[
                     "Next.js 14",
+                    "React",
                     "OpenAI",
-                    "OCR",
-                    "TypeScript",
                     "Tailwind CSS",
                   ].map((tech) => (
                     <span key={tech} className="pill-badge">
@@ -71,7 +70,7 @@ export default function FeaturedProject() {
 
               <div className="flex flex-wrap gap-3">
                 <motion.a
-                  href="https://github.com/hadiaymen"
+                  href="https://stunet-six.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.03 }}
@@ -84,7 +83,7 @@ export default function FeaturedProject() {
                   View Project
                 </motion.a>
                 <motion.a
-                  href="https://github.com/hadiaymen"
+                  href="https://github.com/hadiaymen/Stunet.git"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.03 }}

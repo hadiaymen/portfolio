@@ -15,13 +15,13 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Lekhai AI",
+    title: "Lekhai",
     description:
-      "AI financial statement generator with automated OCR and LLM data extraction.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA5GdwUH-v5peN4BRmAsZB5AA3dC-oz2WVH8JMcr2G9jHlaVzs9RD8O9vJV4ORnVFzaMShKVXCOAu_dHoSAwfEuFPm9ULvhChoLJ9wTWob1_5UhEyQaqpz9EmixlUfaUCDB6tXRPoHSSyuJSBfyHYdrgpG18LPHQfCCuL5R-XjyWMkSFp4HNPgIcI_elPa12eHQvYmQktGcxSsiHmJiq5BGNEfLqJHbPsl1n5PkScEHchfY5G5QGV7lYKCvHnYPZWk1gFimkPSrf_A",
-    tags: ["Next.js 14", "OpenAI"],
-    link: "https://github.com/hadiaymen",
+      "An AI-powered financial statement generator that analyzes uploaded financial documents, extracts key accounting data, and automatically creates professional financial reports with AI-driven insights.",
+    image: "/projects/lekhai.png",
+    tags: ["Next.js 14", "React", "FastAPI", "OpenAI GPT"],
+    link: "https://github.com/hadiaymen/Lekhai.git",
+    github: "https://github.com/hadiaymen/Lekhai.git",
   },
   {
     title: "MeeCu",
@@ -33,16 +33,7 @@ const projects: Project[] = [
     demo: "https://meecu.netlify.app/",
     github: "https://github.com/hadiaymen/MeeCu.git",
   },
-  {
-    title: "StuNet",
-    description:
-      "AI-powered student learning platform with organized study resources, smart assistance, and a modern responsive interface for an enhanced learning experience.",
-    image: "/projects/stunet.png",
-    tags: ["Next.js 14", "React", "OpenAI", "Tailwind CSS"],
-    link: "https://stunet-six.vercel.app",
-    demo: "https://stunet-six.vercel.app",
-    github: "https://github.com/hadiaymen/Stunet.git",
-  },
+
   {
     title: "iEdgeDetector",
     description:
